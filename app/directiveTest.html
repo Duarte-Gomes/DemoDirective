@@ -1,0 +1,36 @@
+<div class="row">
+    <h2 class="text-center">Employees List</h2>
+</div>
+<div class="row">
+    <div class="col-sm-9">
+        <table class="table table-striped">
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Job</th>
+            </tr>
+            <tr ng-repeat="item in information">
+                <td>{{$index}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.job}}</td> 
+            </tr>
+        </table>
+    </div>
+
+    <div class="col-sm-3">
+        <div class="form-group">
+            <label for="name">Employee Name</label>
+            <p class="error-style">{{error}}</p>
+            <input id="name" type="text" ng-model="name" class="form-control">
+        </div>
+    
+        <div class="form-group">
+            <label for="job">Employee Job</label>
+            <input id="job" type="text" ng-model="job" class="form-control">
+        </div>
+        
+
+        <button class="btn btn-primary btn-style">Add to list</button>
+
+    </div>
+</div>
